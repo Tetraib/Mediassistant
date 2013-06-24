@@ -1,0 +1,10 @@
+{
+  "name": "MEDIASSISTANT",
+  "description": "",
+  "author": "Thibaut CONSTANT",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "3.2.6",
+    "socket.io": "0.9.16"
+  }  
+}
