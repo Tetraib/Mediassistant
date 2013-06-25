@@ -22,7 +22,7 @@ var express = require("express"),
 app.configure(function() {
     app.use(express.static(__dirname + '/public'));
 });
-server.listen(process.env.PORT, process.env.IP);
+server.listen("8080");
 //
 //----------ROUTEUR----------
 app.get('/', function(req, res) {
