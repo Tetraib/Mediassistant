@@ -1,0 +1,69 @@
+<!--Copyright 2013 Thibaut CONSTANT-->
+<!--This file is part of MEDIASSISTANT.-->
+<!---->
+<!-- Mediassistant is free software: you can redistribute it and/or modify-->
+<!-- it under the terms of the GNU General Public License as published
+by-->
+<!-- the Free Software Foundation, either version 3 of the License, or-->
+<!-- (at your option) any later version.-->
+<!---->
+<!-- Mediassistant is distributed in the hope that it will be useful,-->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the-->
+<!-- GNU General Public License for more details.-->
+<!---->
+<!-- You should have received a copy of the GNU General Public License-->
+<!-- along with Mediassistant. If not, see <http://www.gnu.org/licenses/>.-->
+<!---->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" type="image/png" href="favicon.png" />
+    </head>
+    
+    <body>
+    <!---->
+        <!------------PAGE1:search page------------>
+        <div data-role="page" data-theme="a" id="search">
+            <div data-role="header" data-position="fixed">
+                <h1>Recherche</h1>
+            </div>
+            <div data-role="content">
+                <h2 align="center">Recherche un patient par sa date de naissance</h2>
+                <label for="dob">Date de naissance</label>
+                <input type="date" name="input" id="dob" value=""
+                />
+                <a data-role="button" data data-icon="arrow-r"
+                data-iconpos="right" id="btn_search">Suivant</a>
+            </div>
+            </script>
+        </div>
+        <!---->
+        <!------------PAGE2:result page------------>
+        <div data-role="page" data-theme="a" id="results" data-add-back-btn="true" data-back-btn-text="Retour">
+            <div data-role="header" data-position="fixed">
+                <h1>Liste de recherche</h1>
+            </div>
+            <div data-role="content" id="thiscontent">
+                <h2 align="center" id="titre">Patients dont la date de naissance est le 17/01/1986</h2>
+                <p>Filtre des patients</p>
+                
+                <ul data-role="listview" data-filter="true" data-filter-placeholder=""
+                data-inset="true" data-filter-theme="a" id="sampleArea"></ul>
+                <button id="btnnew">
+                    <p>Nouveau patient</p>
+                </button>
+            </div>
+        </div>
+        <!--</page-->
+         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script src="JS/mustache.min.js"></script>
+        <script src="JS/search.js"></script>
+    </body>
+
+</html>

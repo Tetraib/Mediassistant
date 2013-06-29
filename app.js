@@ -14,49 +14,61 @@
 //     You should have received a copy of the GNU General Public License
 //     along with Mediassistant.  If not, see <http://www.gnu.org/licenses/>.
 // 
-//----------START SERVER---------
+"use strict";
 var express = require("express"),
     app = express(),
-    server = require('http').createServer(app),
-    io = require('socket.io').listen(server);
+    server = require('http').createServer(app);
 app.configure(function() {
     app.use(express.static(__dirname + '/public'));
 });
-server.listen("8080");
-//
-//----------ROUTEUR----------
+server.listen(process.env.PORT, process.env.IP);
+
+//start moongoose
+var mongoose = require('mongoose');
+//connect to import mongo database
+mongoose.connect(process.env.IP + "/import");
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongodb connection error:'));
+db.once('open', function callback() {
+    console.log("mongodb connected to : " + process.env.IP + "/import");
+    //Mongoose schema
+    var patientSchema = mongoose.Schema({
+        dob: String,
+        fname: String,
+        lname: String,
+        sex: Number,
+        address: String,
+        address2: String,
+        zip: Number,
+        city: String,
+        phone: String
+    });
+    // Mongoose model
+    var patientModel = mongoose.model('patient', patientSchema);
+    // DB queries and result
+    app.get('/search', function(req, res) {
+//respond to a queri : /search?qdob=<dob>
+        var varQdob = req.query.qdob;
+        
+// find the patients matching dob
+        patientModel.find({
+            dob: varQdob
+        }, function(err, schrpatient) {
+            if (err) console.log("dob query error");
+//addresult to object result for mustache templating
+            var varResult = {
+                result: schrpatient
+            };
+            //send result as json
+            res.json(varResult);
+            
+
+        });
+    });
+});
+// routeur
 app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/index.html');
+    res.redirect("../search.html");
 });
-app.get('/patient', function(req, res) {
-    res.sendfile(__dirname + "/public/patient.html");
-});
-app.get('/searchlist', function(req, res) {
-    res.sendfile(__dirname + "/public/searchlist.html");
-});
-app.get('/advsearch', function(req, res) {
-    res.sendfile(__dirname + "/public/advsearch.html");
-});
-//
-//----------SOCKET.IO----------
-//Connection check
-io.sockets.on('connection', function(socket) {
-    socket.emit('connected');
-});
-//----------DATABASE----------
-//Fake db
-var patient = {
-    "name":"Thibaut",
-    "lastname":"CONSTANT",
-    "dob":"1986/04/07",
-    "sexe":"2",
-    "address":{
-        "zip":"59000",
-        "city":"LILLE",
-        "address":"1 BIS RUE DE VALMY"        
-    },
-    "contact":{
-        "phone":"0601145595",
-        "mail":"thibaut.constant@isisphinx.com"
-    }
-};
+
+
