@@ -26,11 +26,11 @@ server.listen(process.env.PORT, process.env.IP);
 //start moongoose
 var mongoose = require('mongoose');
 //connect to import mongo database
-mongoose.connect(process.env.IP + "/import");
+mongoose.connect("mongodb://test:test@dharma.mongohq.com:10028/app16615432");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongodb connection error:'));
 db.once('open', function callback() {
-    console.log("mongodb connected to : " + process.env.IP + "/import");
+    console.log("mongodb connected to : " + "mongodb://dharma.mongohq.com:10028/app16615432");
     //Mongoose schema
     var patientSchema = mongoose.Schema({
         dob: String,
