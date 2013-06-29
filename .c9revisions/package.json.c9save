@@ -11,3 +11,5 @@
 {"ts":1372537459724,"patch":[[{"diffs":[[0,"6.13\"\r\n}"],[1,",\r\n\"engine\": \"node 0.4.1\""],[0,"\r\n}"]],"start1":193,"start2":193,"length1":11,"length2":36}]],"length":229,"saved":false}
 {"ts":1372537476796,"patch":[[{"diffs":[[0,"e 0."],[-1,"4"],[1,"10"],[0,".1"],[1,"2"],[0,"\"\r\n}"]],"start1":218,"start2":218,"length1":11,"length2":13}]],"length":231,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1372537773172,"patch":[[{"diffs":[[0,".6.13\"\r\n"],[1,"    "],[0,"},\r\n\"eng"]],"start1":192,"start2":192,"length1":16,"length2":20}]],"length":235,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1372541090332,"patch":[[{"diffs":[[0,"10.12\"\r\n"],[1,"\"npm\": \"1.2.x\"\r\n"],[0,"}"]],"start1":226,"start2":226,"length1":9,"length2":25}]],"length":251,"saved":false}
+{"ts":1372541231907,"patch":[[{"diffs":[[0," \"1."],[-1,"2.x"],[1,"3.1"],[0,"\"\r\n}"]],"start1":240,"start2":240,"length1":11,"length2":11}]],"length":251,"saved":false}
