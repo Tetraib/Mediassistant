@@ -21,6 +21,8 @@ var express = require("express"),
 app.configure(function() {
     app.use(express.static(__dirname + '/public'));
 });
+// baasic authentification :
+app.use(express.basicAuth('test', 'test'));
 server.listen(process.env.PORT, process.env.IP);
 
 //start moongoose
