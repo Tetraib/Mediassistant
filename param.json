@@ -1,0 +1,5 @@
+{
+    "login":"test",
+    "pswd":"test",
+    "mongodburl":"mongodb://test:test@dharma.mongohq.com:10028/app16615432"
+}
