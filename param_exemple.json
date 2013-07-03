@@ -1,0 +1,5 @@
+{
+    "login":"<login>",
+    "pswd":"<password>",
+    "mongodburl":"mongodb://<login>:<password>@<host>:<port>/<database"
+}

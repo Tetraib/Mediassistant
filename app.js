@@ -15,6 +15,9 @@
 //     along with Mediassistant.  If not, see <http://www.gnu.org/licenses/>.
 // 
 "use strict";
+//require the parameters file
+var param = require("./param.json");
+
 var express = require("express"),
     app = express(),
     server = require('http').createServer(app);
@@ -22,17 +25,17 @@ app.configure(function() {
     app.use(express.static(__dirname + '/public'));
 });
 // baasic authentification :
-app.use(express.basicAuth('test', 'test'));
+app.use(express.basicAuth(param.login, param.pswd));
 server.listen(process.env.PORT, process.env.IP);
 
 //start moongoose
 var mongoose = require('mongoose');
 //connect to import mongo database
-mongoose.connect("mongodb://test:test@dharma.mongohq.com:10028/app16615432");
+mongoose.connect(param.mongodburl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'mongodb connection error:'));
 db.once('open', function callback() {
-    console.log("mongodb connected to : " + "mongodb://dharma.mongohq.com:10028/app16615432");
+    console.log("connected to mongodb");
     //Mongoose schema
     var patientSchema = mongoose.Schema({
         dob: String,
@@ -72,5 +75,3 @@ db.once('open', function callback() {
 app.get('/', function(req, res) {
     res.redirect("../search.html");
 });
-
-
