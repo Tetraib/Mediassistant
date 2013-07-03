@@ -1,4 +1,0 @@
-{"ts":1372879234842,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1372879237400,"patch":[[{"diffs":[[1,"{\n    \"login\":\"test\",\n    \"pswd\":\"test\",\n    \"mongodburl\":\"mongodb://test:test@dharma.mongohq.com:10028/app16615432\"\n}"]],"start1":0,"start2":0,"length1":0,"length2":118}]],"length":118,"saved":false}
-{"ts":1372879364573,"patch":[[{"diffs":[[0,"b://"],[-1,"test:test@dharma.mongohq.com:10028/app16615432"],[1,"<login>:<password>@<host>:<port>/<database"],[0,"\"\n}"]],"start1":65,"start2":65,"length1":53,"length2":49}]],"length":114,"saved":false}
-{"ts":1372879387818,"patch":[[{"diffs":[[0,"login\":\""],[-1,"test"],[1,"<login>"],[0,"\",\n    \""]],"start1":7,"start2":7,"length1":20,"length2":23},{"diffs":[[0,"d\":\""],[-1,"test"],[1,"<password>"],[0,"\",\n "]],"start1":33,"start2":33,"length1":12,"length2":18}]],"length":123,"saved":false}
