@@ -2,3 +2,4 @@
 {"contributors":[],"silentsave":false,"ts":1372878834121,"patch":[[{"diffs":[[1,"#ignoring files for Git"]],"start1":0,"start2":0,"length1":0,"length2":23}]],"length":23,"saved":false}
 {"ts":1372878843076,"patch":[[{"diffs":[[0," for Git"],[1,"\nparam.json"]],"start1":15,"start2":15,"length1":8,"length2":19}]],"length":34,"saved":false}
 {"ts":1372878874267,"patch":[[{"diffs":[[0,"ram.json"],[1,"\nnode_modules"]],"start1":26,"start2":26,"length1":8,"length2":21}]],"length":47,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1372879977305,"patch":[[{"diffs":[[0,"_modules"],[1,"/\n.c9revisions/\n.git/"]],"start1":39,"start2":39,"length1":8,"length2":29}]],"length":68,"saved":false}
