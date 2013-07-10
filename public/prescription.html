@@ -1,0 +1,194 @@
+<!--Copyright 2013 Thibaut CONSTANT-->
+<!--This file is part of MEDIASSISTANT.-->
+<!---->
+<!-- Mediassistant is free software: you can redistribute it and/or modify-->
+<!-- it under the terms of the GNU General Public License as published
+by-->
+<!-- the Free Software Foundation, either version 3 of the License, or-->
+<!-- (at your option) any later version.-->
+<!---->
+<!-- Mediassistant is distributed in the hope that it will be useful,-->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the-->
+<!-- GNU General Public License for more details.-->
+<!---->
+<!-- You should have received a copy of the GNU General Public License-->
+<!-- along with Mediassistant. If not, see <http://www.gnu.org/licenses/>.-->
+<!---->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"
+        />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    </head>
+    
+    <body>
+        <!---->
+        <!------------PAGE1:search page------------>
+        <div data-role="page" data-theme="a" id="prescription">
+            <div data-role="header" data-position="fixed">
+                <h1>Préscription</h1>
+            </div>
+            <!--</header>-->
+            <div data-role="content">
+                <h2 align="center">M. Jean DUPONT - 47 ans - 170 cm - 70 KG</h2>
+                <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a" style="padding-right:0.5em">
+                        <h3 align="center">Posologie</h3>
+                        <p>Recherche d'un médicament</p>
+                        <ul data-role="listview" data-filter="true" data-filter-reveal="true"
+                        data-inset="true" data-filter-theme="a" data-filter-placeholder="" id="medic" data-icon="false">
+                            <!--Change to Remote autocomplete with listview filter-->
+                            <li>
+                                <a>DAFALGAN 1 g, comprimé effervescent</a>
+                            </li>
+                            <li>
+                                <a>DOLIPRANE 1000 mg, comprimé</a>
+                            </li>
+                            <li>
+                                <a>ASPIRINE DU RHONE 500 mg, comprimé à croquer</a>
+                            </li>
+                        </ul>
+                        <h1></h1>
+                        <!--<p align="center">Prendre</p>-->
+                        <fieldset data-role="controlgroup" data-type="horizontal" align="center">
+                            <input type="radio" name="radio-choice-1" id="radio-choice-11" checked="checked"
+                            />
+                            <label for="radio-choice-11">1</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-12"
+                            />
+                            <label for="radio-choice-12">2</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-13"
+                            />
+                            <label for="radio-choice-13">3</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-14"
+                            />
+                            <label for="radio-choice-14">4</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-15"
+                            />
+                            <label for="radio-choice-15">5</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-16"
+                            />
+                            <label for="radio-choice-16">6</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-17"
+                            />
+                            <label for="radio-choice-17">7</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-18"
+                            />
+                            <label for="radio-choice-18">8</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-19"
+                            />
+                            <label for="radio-choice-19">9</label>
+                            <input type="radio" name="radio-choice-1" id="radio-choice-110"
+                            />
+                            <label for="radio-choice-110">10</label>
+                        </fieldset>
+                        <!--Rendre variable-->
+                        <p align="center">prise</p>
+                        <p align="center">tous les</p>
+                        <fieldset data-role="controlgroup" data-type="horizontal"
+                        align="center">
+                            <input type="radio" name="radio-choice-2" id="radio-choice-21" checked="checked"
+                            />
+                            <label for="radio-choice-21">1</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-22"
+                            />
+                            <label for="radio-choice-22">2</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-23"
+                            />
+                            <label for="radio-choice-23">3</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-24"
+                            />
+                            <label for="radio-choice-24">4</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-25"
+                            />
+                            <label for="radio-choice-25">5</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-26"
+                            />
+                            <label for="radio-choice-26">6</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-27"
+                            />
+                            <label for="radio-choice-27">7</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-28"
+                            />
+                            <label for="radio-choice-28">8</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-29"
+                            />
+                            <label for="radio-choice-29">9</label>
+                            <input type="radio" name="radio-choice-2" id="radio-choice-210"
+                            />
+                            <label for="radio-choice-210">10</label>
+                        </fieldset>
+                        <fieldset data-role="controlgroup" data-type="horizontal" align="center">
+                            <input type="radio" name="radio-3" id="radio-31" />
+                            <label for="radio-31">Heures</label>
+                            <input type="radio" name="radio-3" id="radio-32" checked="checked"
+                            />
+                            <label for="radio-32">Jours</label>
+                            <input type="radio" name="radio-3" id="radio-33" />
+                            <label for="radio-33">Semaines</label>
+                            <input type="radio" name="radio-3" id="radio-34" />
+                            <label for="radio-34">Mois</label>
+                        </fieldset>
+                        <p align="center">pendant</p>
+                    </div>
+                    <!--</ui-block-a>-->
+                    <div class="ui-block-b" style="padding-left:0.5em">
+                        <h3 align="center">Préscription</h3>
+                        <ul data-role="listview" data-inset="true" id="mediclist"
+                        data-divider-theme="a" data-icon="false">
+                            <li data-role="list-divider">
+                                <div class="ui-bar ui-grid-a">
+                                    <div class="ui-block-a" style="margin-top:10px;">
+                                        <h1>DAFALGAN 1 g, comprimé effervescent</h1>
+                                    </div>
+                                    <div class="ui-block-b" style="text-align:right;">
+                                        <a target="_blank" href="http://agence-prd.ansm.sante.fr/php/ecodex/extrait.php?specid=63264636"
+                                        data-role="button" data-mini="true" data-icon="plus" data-inline="true"
+                                        data-theme="a">infos</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a>1 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                            </li>
+                            <li></li>
+                            <li data-role="list-divider">
+                                <div class="ui-bar ui-grid-a ui-responsive">
+                                    <div class="ui-block-a" style="margin-top:10px;">
+                                        <h1>ASPIRINE DU RHONE 500 mg, comprimé à croquer</h1>
+                                    </div>
+                                    
+                                    <div class="ui-block-b" style="text-align:right;">
+                                        <a target="_blank" href="http://agence-prd.ansm.sante.fr/php/ecodex/extrait.php?specid=69029253"
+                                        data-role="button" data-mini="true" data-icon="plus" data-inline="true"
+                                        data-theme="a">infos</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a>1 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                            </li>
+                            <li>
+                                <a>puis 2 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--</ui-block-b>-->
+                </div>
+                <!--</ui-grid-a>-->
+            </div>
+            <!--</content>-->
+        </div>
+        <!--</page>-->
+        <script src="JS/mustache.min.js"></script>
+        <script src="JS/prescription.js"></script>
+    </body>
+
+</html>

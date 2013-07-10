@@ -1,5 +1,4 @@
 #ignoring files for Git
-#param_exemple.json
 param.json
 node_modules/
 .c9revisions/
