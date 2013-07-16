@@ -22,37 +22,35 @@ by-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" type="image/png" href="favicon.png" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"
+        />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
     </head>
     
     <body>
-    <!---->
+        <!---->
         <!------------PAGE1:search page------------>
         <div data-role="page" data-theme="a" id="search">
             <div data-role="header" data-position="fixed">
-                <h1>Recherche</h1>
+                <h1>Recherche un patient par la date de naissance</h1>
             </div>
             <div data-role="content">
-                <h2 align="center">Recherche un patient par sa date de naissance</h2>
                 <label for="dob">Date de naissance</label>
                 <input type="date" name="input" id="dob" value=""
                 />
-                <a data-role="button" data data-icon="arrow-r"
-                data-iconpos="right" id="btn_search">Suivant</a>
-            </div>            
+                <a data-role="button" data data-icon="arrow-r" data-iconpos="right" id="btn_search">Suivant</a>
+            </div>
         </div>
         <!---->
         <!------------PAGE2:result page------------>
-        <div data-role="page" data-theme="a" id="results" data-add-back-btn="true" data-back-btn-text="Retour">
+        <div data-role="page" data-theme="a" id="results" data-add-back-btn="true"
+        data-back-btn-text="Retour">
             <div data-role="header" data-position="fixed">
-                <h1>Liste de recherche</h1>
+                <h1>Patients dont la date de naissance est le 17/01/1986</h1>
             </div>
             <div data-role="content" id="thiscontent">
-                <h2 align="center" id="titre">Patients dont la date de naissance est le 17/01/1986</h2>
                 <p>Filtre des patients</p>
-                
                 <ul data-role="listview" data-filter="true" data-filter-placeholder=""
                 data-inset="true" data-filter-theme="a" id="sampleArea"></ul>
                 <button id="btnnew">
@@ -60,7 +58,7 @@ by-->
                 </button>
             </div>
         </div>
-        <!--</page-->  
+        <!--</page-->
         <script src="JS/mustache.min.js"></script>
         <script src="JS/search.js"></script>
     </body>
