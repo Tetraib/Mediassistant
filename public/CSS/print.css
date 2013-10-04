@@ -1,0 +1,18 @@
+/* Feuille de style minimaliste pour impression */
+ 
+/* 1. Simplification des styles graphiques pour tous les éléments */
+* { color: #000!important; background: #FFF!important; border: none; font-family: Garamond, Arial, Verdana; font-size: 14pt; }
+ 
+/* 2. Dimension des blocs conteneurs */
+body, #wrap, #content, article { width: 100%; margin: 0; padding: 0; }
+ 
+/* 3. Blocs supprimés */
+#accessibility, #breadcrumb, #pub, #menu, #sidebar, nav, aside { display: none; }
+ 
+/* 4. Contrôle de la dimension de certains éléments */
+img, table, td, blockquote, code, pre, textarea, input, object, video { max-width: 100%; height: auto; }
+textarea, table, td, th, code, pre, samp, div, p { word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto;-o-hyphens: auto; hyphens: auto; }
+ 
+/* 5. Affichage des liens */
+#content a { text-decoration: underline; }
+#content a[href]:after { content: " [" attr(href) "]"; }

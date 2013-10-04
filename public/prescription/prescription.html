@@ -1,0 +1,222 @@
+<!--Copyright 2013 Thibaut CONSTANT-->
+<!--This file is part of MEDIASSISTANT.-->
+<!---->
+<!-- Mediassistant is free software: you can redistribute it and/or modify-->
+<!-- it under the terms of the GNU General Public License as published
+by-->
+<!-- the Free Software Foundation, either version 3 of the License, or-->
+<!-- (at your option) any later version.-->
+<!---->
+<!-- Mediassistant is distributed in the hope that it will be useful,-->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the-->
+<!-- GNU General Public License for more details.-->
+<!---->
+<!-- You should have received a copy of the GNU General Public License-->
+<!-- along with Mediassistant. If not, see <http://www.gnu.org/licenses/>.-->
+<!---->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="stylesheet" href="/CSS/jquery.mobile-1.3.2.min.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="/JS/jquery.mobile-1.3.2.min.js"></script>
+        <script src="/JS/mustache.min.js"></script>
+        <script src="/JS/prescription.js"></script>
+    </head>
+    
+    <body>
+        <div data-role="page" data-theme="a" id="prescription" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>Préscription pour M. Jean DUPONT - 47 ans - 170 cm - 70 kg</h1>
+            </div>
+            <!--</header>-->
+            <div data-role="content">
+                <ul data-role="listview" id="autocomplete" data-filter="true" data-filter-reveal="true"
+                data-inset="true" data-filter-theme="a" data-filter-placeholder="Médicament"
+                data-icon="false">
+                    <!--Change to Remote autocomplete with listview filter-->
+                    <li>
+                        <a>DAFALGAN 1 g, comprimé effervescent</a>
+                    </li>
+                    <li>
+                        <a>DOLIPRANE 1000 mg, comprimé</a>
+                    </li>
+                    <li>
+                        <a>ASPIRINE DU RHONE 500 mg, comprimé à croquer</a>
+                    </li>
+                </ul>
+                <h1></h1>
+                <legend>Prise</legend>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-intake" id="rc-intake1" value="0" checked="checked"
+                    />
+                    <label for="rc-intake1">1</label>
+                    <input type="radio" name="rc-intake" id="rc-intake2" value="1"
+                    />
+                    <label for="rc-intake2">2</label>
+                    <input type="radio" name="rc-intake" id="rc-intake3" value="2"
+                    />
+                    <label for="rc-intake3">3</label>
+                    <input type="radio" name="rc-intake" id="rc-intake4" value="3"
+                    />
+                    <label for="rc-intake4">4</label>
+                    <input type="radio" name="rc-intake" id="rc-intake5" value="4"
+                    />
+                    <label for="rc-intake5">5</label>
+                    <input type="radio" name="rc-intake" id="rc-intake6" value="5"
+                    />
+                    <label for="rc-intake6">6</label>
+                    <input type="radio" name="rc-intake" id="rc-intake7" value="6"
+                    />
+                    <label for="rc-intake7">7</label>
+                    <input type="radio" name="rc-intake" id="rc-intake8" value="7"
+                    />
+                    <label for="rc-intake8">8</label>
+                    <input type="radio" name="rc-intake" id="rc-intake9" value="8"
+                    />
+                    <label for="rc-intake9">9</label>
+                    <input type="radio" name="rc-intake" id="rc-intake10" value="9"
+                    />
+                    <label for="rc-intake10">10</label>
+                    <input type="radio" name="rc-intake" id="rc-intake11" value="10"
+                    />
+                    <label for="rc-intake11">11</label>
+                    <input type="radio" name="rc-intake" id="rc-intake12" value="11"
+                    />
+                    <label for="rc-intake12">12</label>
+                    
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme1" value="0" />
+                    <label for="cb-scheme1">Matin</label>
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme2" value="1"  />
+                    <label for="cb-scheme2">10h</label>
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme3" value="2" />
+                    <label for="cb-scheme3">Midi</label>
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme4" value="3" />
+                    <label for="cb-scheme4">16h</label>
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme5" value="4" />
+                    <label for="cb-scheme5">Soir</label>
+                    <input type="checkbox" name="cb-scheme" id="cb-scheme6" value="5" />
+                    <label for="cb-scheme6">Coucher</label>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-meal" id="rc-meal1" value="0" checked="checked" />
+                    <label for="rc-meal1">∅</label>
+                    <input type="radio" name="rc-meal" id="rc-meal2" value="1" />
+                    <label for="rc-meal2">Avant le repas</label>
+                    <input type="radio" name="rc-meal" id="rc-meal3" value="2"
+                    />
+                    <label for="rc-meal3">Pendant le repas</label>
+                    <input type="radio" name="rc-meal" id="rc-meal4" value="3"
+                    />
+                    <label for="rc-meal4">Après le repas</label>
+                    <input type="radio" name="rc-meal" id="rc-meal5" value="4"
+                    />
+                    <label for="rc-meal5">A distance des repas</label>
+                </fieldset>
+                <legend>Tous les</legend>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-every" id="rc-every1" value="0" checked="checked" />
+                    <label for="rc-every1">1</label>
+                    <input type="radio" name="rc-every" id="rc-every2" value="1" />
+                    <label for="rc-every2">2</label>
+                    <input type="radio" name="rc-every" id="rc-every3" value="2" />
+                    <label for="rc-every3">3</label>
+                    <input type="radio" name="rc-every" id="rc-every4" value="3" />
+                    <label for="rc-every4">4</label>
+                    <input type="radio" name="rc-every" id="rc-every5" value="4" />
+                    <label for="rc-every5">5</label>
+                    <input type="radio" name="rc-every" id="rc-every6" value="5" />
+                    <label for="rc-every6">6</label>
+                    <input type="radio" name="rc-every" id="rc-every7" value="6" />
+                    <label for="rc-every7">7</label>
+                    <input type="radio" name="rc-every" id="rc-every8" value="7" />
+                    <label for="rc-every8">8</label>
+                    <input type="radio" name="rc-every" id="rc-every9" value="8" />
+                    <label for="rc-every9">9</label>
+                    <input type="radio" name="rc-every" id="rc-every10" value="9" />
+                    <label for="rc-every10">10</label>
+                    <input type="radio" name="rc-every" id="rc-every11" value="10" />
+                    <label for="rc-every11">11</label>
+                    <input type="radio" name="rc-every" id="rc-every12" value="11" />
+                    <label for="rc-every12">12</label>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-everytype" id="rc-everytype1" value="0" />
+                    <label for="rc-everytype1">Heures</label>
+                    <input type="radio" name="rc-everytype" id="rc-everytype2" value="1"
+                    checked="checked" />
+                    <label for="rc-everytype2">Jours</label>
+                    <input type="radio" name="rc-everytype" id="rc-everytype3" value="2"
+                    />
+                    <label for="rc-everytype3">Semaines</label>
+                    <input type="radio" name="rc-everytype" id="rc-everytype4" value="3"
+                    />
+                    <label for="rc-everytype4">Mois</label>
+                </fieldset>
+                <legend>Pendant</legend>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-duration" id="rc-duration1" value="0" checked="checked"
+                    />
+                    <label for="rc-duration1">1</label>
+                    <input type="radio" name="rc-duration" id="rc-duration2" value="1" />
+                    <label for="rc-duration2">2</label>
+                    <input type="radio" name="rc-duration" id="rc-duration3" value="2" />
+                    <label for="rc-duration3">3</label>
+                    <input type="radio" name="rc-duration" id="rc-duration4" value="3" />
+                    <label for="rc-duration4">4</label>
+                    <input type="radio" name="rc-duration" id="rc-duration5" value="4" />
+                    <label for="rc-duration5">5</label>
+                    <input type="radio" name="rc-duration" id="rc-duration6" value="5" />
+                    <label for="rc-duration6">6</label>
+                    <input type="radio" name="rc-duration" id="rc-duration7" value="6" />
+                    <label for="rc-duration7">7</label>
+                    <input type="radio" name="rc-duration" id="rc-duration8" value="7" />
+                    <label for="rc-duration8">8</label>
+                    <input type="radio" name="rc-duration" id="rc-duration9" value="8" />
+                    <label for="rc-duration9">9</label>
+                    <input type="radio" name="rc-duration" id="rc-duration10" value="9" />
+                    <label for="rc-duration10">10</label>
+                    <input type="radio" name="rc-duration" id="rc-duration11" value="10" />
+                    <label for="rc-duration11">11</label>
+                    <input type="radio" name="rc-duration" id="rc-duration12" value="11" />
+                    <label for="rc-duration12">12</label>
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-durationtype" id="rc-durationtype1" value="0" />
+                    <label for="rc-durationtype1">Heures</label>
+                    <input type="radio" name="rc-durationtype" id="rc-durationtype2" value="1"
+                    />
+                    <label for="rc-durationtype2">Jours</label>
+                    <input type="radio" name="rc-durationtype" id="rc-durationtype3" value="2"
+                    />
+                    <label for="rc-durationtype3">Semaines</label>
+                    <input type="radio" name="rc-durationtype" id="rc-durationtype4" value="3"
+                    checked="checked" />
+                    <label for="rc-durationtype4">Mois</label>
+                </fieldset>
+                <input type="text" id="prescriptiontext" />
+                <legend>Notes</legend>
+                <textarea is="ta-note"></textarea>
+                <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a" style="width:75%;">
+                        <a data-role="button" href="/prescription/ordonnance.html">Valider</a>
+                    </div>
+                    <div class="ui-block-b" style="width:25%;">
+                        <a data-role="button">Supprimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/content-->
+        </div>
+        <!--/page-->
+    </body>
+
+</html>

@@ -22,47 +22,49 @@ by-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" type="image/png" href="favicon.png" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" media="screen"
         />
+        <!--<link rel="stylesheet" href="CSS/print.css" media="print" />-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
     </head>
     
     <body>
-        <div data-role="page" data-theme="a" id="models">
+        <div data-role="page" data-theme="a" id="models" data-add-back-btn="true">
             <div data-role="header" data-position="fixed" data-tap-toggle="false">
                 <h1>Préscription pour M. Jean DUPONT - 47 ans - 170 cm - 70 kg</h1>
             </div>
             <!--</header>-->
             <div data-role="content">
-                <a data-role="button">Nouvelle préscription</a>
+                <a data-role="button" href="#prescription">Nouvelle préscription</a>
                 <div>Modèles de préscriptions</div>
                 <p></p>
                 <ul data-role="listview" data-filter="true" data-inset="true" data-filter-theme="a"
                 data-filter-placeholder="" id="medic" data-icon="false">
                     <li>
-                        <a>DAFALGAN 1 g standard</a>
+                        <a href="#ordonnance">DAFALGAN 1 g standard</a>
                     </li>
                     <li>
-                        <a>DOLIPRANE 1000 mg renouvellement</a>
+                        <a href="#ordonnance">DOLIPRANE 1000 mg renouvellement</a>
                     </li>
                     <li>
-                        <a>test</a>
+                        <a href="#ordonnance">test</a>
                     </li>
                 </ul>
             </div>
             <!--/content-->
         </div>
         <!--/page-->
-        <div data-role="page" data-theme="a" id="prescription">
+        <div data-role="page" data-theme="a" id="prescription" data-add-back-btn="true">
             <div data-role="header" data-position="fixed" data-tap-toggle="false">
                 <h1>Préscription pour M. Jean DUPONT - 47 ans - 170 cm - 70 kg</h1>
+                <input type="text" data-clear-btn="true" />
             </div>
             <!--</header>-->
             <div data-role="content">
-                <p>Médicament</p>
+                <!--<p>Médicament</p>-->
                 <ul data-role="listview" data-filter="true" data-filter-reveal="true"
-                data-inset="true" data-filter-theme="a" data-filter-placeholder="" id="medic"
+                data-inset="true" data-filter-theme="a" data-filter-placeholder="Médicament" id="medic"
                 data-icon="false">
                     <!--Change to Remote autocomplete with listview filter-->
                     <li>
@@ -211,11 +213,11 @@ by-->
                     checked="checked" />
                     <label for="rc-durationtype4">Mois</label>
                 </fieldset>
-                <input type="text" data-clear-btn="true" />
+                <legend>Notes</legend>
                 <textarea is="ta-note"></textarea>
                 <div class="ui-grid-a ui-responsive">
                     <div class="ui-block-a" style="width:75%;">
-                        <a data-role="button">Valider</a>
+                        <a data-role="button" href="#ordonnance">Valider</a>
                     </div>
                     <div class="ui-block-b" style="width:25%;">
                         <a data-role="button">Supprimer</a>
@@ -226,7 +228,7 @@ by-->
         <!--/content-->
         </div>
         <!--/page-->
-        <div data-role="page" data-theme="a" id="ordonnance">
+        <div data-role="page" data-theme="a" id="ordonnance" data-add-back-btn="true">
             <div data-role="header" data-position="fixed" data-tap-toggle="false">
                 <h1>Préscription pour M. Jean DUPONT - 47 ans - 170 cm - 70 kg</h1>
             </div>
@@ -250,7 +252,7 @@ by-->
                 </ul>
                 <ul data-role="listview" data-inset="true" data-divider-theme="a" data-icon="false">
                     <li data-role="list-divider">
-                        <a style="color: #FFFFFF; text-decoration:none;" target="_blank" href="http://agence-prd.ansm.sante.fr/php/ecodex/extrait.php?specid=69029253"><h1>ASPIRINE DU RHONE 500 mg, comprimé à croquer</h1></a>
+                        <h1>ASPIRINE DU RHONE 500 mg, comprimé à croquer</h1>
                     </li>
                     <li>
                         <a>1 prise le midi au cours du repas tous les jours pendant 3 mois</a>
@@ -260,8 +262,7 @@ by-->
                     </li>
                 </ul>
                 <legend>Renouveler</legend>
-                <fieldset data-role="controlgroup" data-type="horizontal"
-                align="center">
+                <fieldset data-role="controlgroup" data-type="horizontal">
                     <input type="radio" name="rc-renew" id="rc-renew1" />
                     <label for="rc-renew1">Ne pas renouveler</label>
                     <input type="radio" name="rc-renew" id="rc-renew2"
@@ -292,7 +293,7 @@ by-->
                     <input type="radio" name="rc-renew" id="rc-renew14" />
                     <label for="rc-renew14">12</label>
                 </fieldset>
-                <a data-role="button">Ajouter un médicament</a>
+                <a data-role="button" href="#prescription">Ajouter un médicament</a>
                 <a data-role="button">Suivant</a>
             </div>
             <!--/content-->
@@ -306,7 +307,7 @@ by-->
             <div data-role="content">
                             <h1>DAFALGAN 1 g, comprimé effervescent</h1>
 
-                <a data-role="button">Consulter l'extrait</a>
+                <a data-role="button" target="_blank" href="http://agence-prd.ansm.sante.fr/php/ecodex/extrait.php?specid=63264636">Consulter l'extrait</a>
                 <a data-role="button">Ajouter une phase</a>
                 <div style="text-align: center; margin: 0 auto;">
                     <select data-role="slider" id="flip-ald">

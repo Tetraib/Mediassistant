@@ -1,0 +1,118 @@
+<!--Copyright 2013 Thibaut CONSTANT-->
+<!--This file is part of MEDIASSISTANT.-->
+<!---->
+<!-- Mediassistant is free software: you can redistribute it and/or modify-->
+<!-- it under the terms of the GNU General Public License as published
+by-->
+<!-- the Free Software Foundation, either version 3 of the License, or-->
+<!-- (at your option) any later version.-->
+<!---->
+<!-- Mediassistant is distributed in the hope that it will be useful,-->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the-->
+<!-- GNU General Public License for more details.-->
+<!---->
+<!-- You should have received a copy of the GNU General Public License-->
+<!-- along with Mediassistant. If not, see <http://www.gnu.org/licenses/>.-->
+<!---->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="stylesheet" href="/CSS/jquery.mobile-1.3.2.min.css" media="screen"/>
+        <link rel="stylesheet" href="/CSS/print.css" media="print" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="/JS/jquery.mobile-1.3.2.min.js"></script>
+        <script src="/JS/mustache.min.js"></script>
+        <script src="/JS/prescription.js"></script>
+    </head>
+    
+    <body>
+        <div data-role="page" data-theme="a" id="ordonnance" data-add-back-btn="true">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>Préscription pour M. Jean DUPONT - 47 ans - 170 cm - 70 kg</h1>
+            </div>
+            <!--</header>-->
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-divider-theme="a" data-icon="false">
+                    <li data-role="list-divider">
+                        <div class="ui-bar ui-grid-a">
+                            <div class="ui-block-a" style="margin-top:10px;width:85%;">
+                                <h1>DAFALGAN 1 g, comprimé effervescent</h1>
+                            </div>
+                            <div class="ui-block-b" style="text-align:right;width:15%" ;>
+                                <a href="/prescription/edit.html" data-role="button" data-mini="true" data-icon="plus" data-inline="true"
+                                data-theme="a" data-rel="dialog">Plus</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/prescription/prescription.html">1 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                    </li>
+                </ul>
+                <ul data-role="listview" data-inset="true" data-divider-theme="a" data-icon="false">
+                    <li data-role="list-divider">
+                    <div class="ui-bar ui-grid-a">
+                            <div class="ui-block-a" style="margin-top:10px;width:85%;">
+                                <h1>ASPIRINE DU RHONE 500 mg, comprimé à croquer</h1>
+                            </div>
+                            <div class="ui-block-b" style="text-align:right;width:15%" ;>
+                                <a href="/prescription/edit.html" data-role="button" data-mini="true" data-icon="plus" data-inline="true"
+                                data-theme="a" data-rel="dialog">Plus</a>
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <a href="/prescription/prescription.html">1 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                    </li>
+                    <li>
+                        <a href="/prescription/prescription.html">puis 2 prise le midi au cours du repas tous les jours pendant 3 mois</a>
+                    </li>
+                </ul>
+                <legend>Renouveler</legend>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="rc-renew" id="rc-renew1" />
+                    <label for="rc-renew1">Ne pas renouveler</label>
+                    <input type="radio" name="rc-renew" id="rc-renew2"
+                    checked="checked" />
+                    <label for="rc-renew2">∅</label>
+                    <input type="radio" name="rc-renew" id="rc-renew3" />
+                    <label for="rc-renew3">1</label>
+                    <input type="radio" name="rc-renew" id="rc-renew4" />
+                    <label for="rc-renew4">2</label>
+                    <input type="radio" name="rc-renew" id="rc-renew5" />
+                    <label for="rc-renew5">3</label>
+                    <input type="radio" name="rc-renew" id="rc-renew6" />
+                    <label for="rc-renew6">4</label>
+                    <input type="radio" name="rc-renew" id="rc-renew7" />
+                    <label for="rc-renew7">5</label>
+                    <input type="radio" name="rc-renew" id="rc-renew8" />
+                    <label for="rc-renew8">6</label>
+                    <input type="radio" name="rc-renew" id="rc-renew9" />
+                    <label for="rc-renew9">7</label>
+                    <input type="radio" name="rc-renew" id="rc-renew10" />
+                    <label for="rc-renew10">8</label>
+                    <input type="radio" name="rc-renew" id="rc-renew11" />
+                    <label for="rc-renew11">9</label>
+                    <input type="radio" name="rc-renew" id="rc-renew12" />
+                    <label for="rc-renew12">10</label>
+                    <input type="radio" name="rc-renew" id="rc-renew13" />
+                    <label for="rc-renew13">11</label>
+                    <input type="radio" name="rc-renew" id="rc-renew14" />
+                    <label for="rc-renew14">12</label>
+                </fieldset>
+                <a data-role="button" href="/prescription/prescription.html">Ajouter un médicament</a>
+                <a data-role="button" target="_blank" href="http://www.vidal.fr/iam/voir/">Intéraction</a>
+                <a data-role="button">Imprimer</a>
+                <a data-role="button">Valider</a>
+            </div>
+            <!--/content-->
+        </div>
+        <!--/page-->
+    </body>
+
+</html>
